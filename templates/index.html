@@ -18,19 +18,20 @@
       </div>
     </nav>
     <center class="row">
-      <form method="post" class="col-md-6 col-md-offset-3">
+      <form method="post" class="col-md-6 col-md-offset-3" action="#">
         <div class="input-group">
-          <input type="text" class="form-control" name="cityname" placeholder="Search">
+          <input type="text" class="form-control" name="name" placeholder="Search">
           <div class="input-group-btn">
-            <button type="button" class="btn btn-dark" type="button">Search</button>
+            <button type="button" class="btn btn-dark" type="submit">Search</button>
               <i class="glyphicon glyphicon-search"></i>
             
           </div>
-          <form>
+        </div>
+      </form>
     </center>
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        {%if weather_data.temperature and weather_data.description and weather_data.humidity%}
+        {%if weather_data.cityname and weather_data.temperature and weather_data.description and weather_data.humidity%}
         <!--<h3>cityname :{{weather_data.cityname}}</h3> -->
           <h5>City : {{cityname}}</h5>
           <h5>temperature :{{weather_data.temperature}}</h5>
